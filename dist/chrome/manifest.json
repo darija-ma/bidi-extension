@@ -1,13 +1,21 @@
 {
     "name": "bidi",
     "description": "Add bidirectional support to popular websites",
-    "version": "0.1",
+    "author": "Youssef Ben Sadik <youssef@bensadik.net>",
+    "version": "0.0.1",
     "manifest_version": 3,
     "permissions": [
         "activeTab",
         "scripting"
     ],
-    "background": {
-        "service_worker": "background.js"
-    }
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "js": [
+                "youtube.js"
+            ]
+        }
+    ]
 }
