@@ -1,0 +1,1 @@
+(()=>{"use strict";var t;let e=!1;function c(t){document.body.style.backgroundColor=t}null===(t=chrome.action)||void 0===t||t.onClicked.addListener((t=>{e=!e;const n=e?"orange":"white";chrome.scripting.executeScript({target:{tabId:t.id?t.id:-1},func:c,args:[n]}).then()}))})();
